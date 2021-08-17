@@ -1,4 +1,4 @@
-package business.product.usuarios;
+package busines.user;
 
 public class Login {
     private int id;
