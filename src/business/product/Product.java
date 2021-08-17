@@ -1,4 +1,4 @@
-package product;
+package business.product;
 
 public class Product {
     private int id;

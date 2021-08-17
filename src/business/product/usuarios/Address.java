@@ -1,4 +1,4 @@
-package usuarios;
+package business.product.usuarios;
 
 public class Address {
     private  int id;
