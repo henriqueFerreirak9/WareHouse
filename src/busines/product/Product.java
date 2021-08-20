@@ -12,4 +12,32 @@ public class Product {
         this.und = und;
         this.provider = provider;
     }
+
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getBarcode() {
+        return barcode;
+    }
+    public void setBarcode(int barcode) {
+        this.barcode = barcode;
+    }
+
+    public int getUnd(){
+        return und;
+    }
+    public void setUnd(int und){
+        this.und = und;
+    }
+
+    public String getProvider() {
+        return provider;
+    }
+    public void setProvider(String provider) {
+        this.provider = provider;
+    }
 }
