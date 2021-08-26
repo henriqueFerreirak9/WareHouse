@@ -4,6 +4,8 @@ public class Product {
     private int id;
     private int barcode;
     private int und;
+    private String name;
+
 
 
     public Product(int id, int barcode, int und){
@@ -32,5 +34,12 @@ public class Product {
     }
     public void setUnd(int und) {
         this.und = und;
+    }
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
     }
 }
