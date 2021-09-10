@@ -1,5 +1,5 @@
 package busines;
-
+import repository.Connect;
 import busines.user.Address;
 import busines.user.User;
 
@@ -14,16 +14,30 @@ public class Main {
         Address end1 = new Address();
         end1.setDistrict("goias");
         end1.setNumber(22);
-        end1.setStreet("v");
+        end1.setStreet("Av. Goias");
 
         user1.setAddress(end1);
 
-        if (user1.getAddress()!= null){
-            System.out.println("id:" + user1.getId() );
-        }
-         System.out.println("name:"+user1.getName());
-        System.out.println("password:"+user1.getPassword());
+        String user_teste =
+          "user 1"
+            + "\nId: " + user1.getId()
+            + "\nNome: " + user1.getName()
+            + "\nSenha: " + user1.getPassword();
+        String user_adress =
+          "endereço user 1"
+            + "\nrua: " + user1.getAddress().getStreet()
+            + "\nEstado: " + user1.getAddress().getDistrict()
+            + "\nNumero: " + user1.getAddress().getNumber();
 
+
+        System.out.println(user_teste);
+        if (user1.getAddress()!= null){
+            System.out.println(user_adress);
+        };
+
+
+        Connect.createConnection();
+        System.out.println(Connect.connectionStatus());
     }
 
 }
