@@ -1,12 +1,17 @@
 package busines.user;
 
 public class Address {
+    private int id;
     private String street;
     private int number;
     private String district;
 
-
-
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getStreet() {
         return street;

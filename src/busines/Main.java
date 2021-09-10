@@ -12,6 +12,7 @@ public class Main {
         user1.setPassword("s1");
 
         Address end1 = new Address();
+        end1.setId(1);
         end1.setDistrict("goias");
         end1.setNumber(22);
         end1.setStreet("Av. Goias");
@@ -25,6 +26,7 @@ public class Main {
             + "\nSenha: " + user1.getPassword();
         String user_adress =
           "endereço user 1"
+            + "\nId adress: " + user1.getAddress().getId()
             + "\nrua: " + user1.getAddress().getStreet()
             + "\nEstado: " + user1.getAddress().getDistrict()
             + "\nNumero: " + user1.getAddress().getNumber();
