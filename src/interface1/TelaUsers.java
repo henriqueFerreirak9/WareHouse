@@ -10,9 +10,10 @@ import java.awt.event.ActionListener;
 public class TelaUsers extends JFrame {
 
 
-    JLabel lb_id, lb_name, lb_sexo, lb_password;
+    JLabel lb_id, lb_name, lb_sexo, lb_password, lb_observacoes;
     JTextField tf_id, tf_name, tf_password;
     JComboBox cb_sexo;
+    JTextArea ta_Observacoes;
     JButton bt_salvar, bt_limpar, bt_fechar;
 
     @SuppressWarnings("rawtypes")
@@ -21,6 +22,8 @@ public class TelaUsers extends JFrame {
         setSize(550, 450);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
+        lb_observacoes = new JLabel("observaçoes");
+        ta_Observacoes = new JTextArea("");
         lb_id        = new JLabel("id");
         lb_password        = new JLabel("password");
         lb_name     = new JLabel("nome");
@@ -40,6 +43,8 @@ public class TelaUsers extends JFrame {
 
         getContentPane().setLayout(null);
 
+        getContentPane().add(ta_Observacoes);
+        getContentPane().add(lb_observacoes);
         getContentPane().add(lb_name);
         getContentPane().add(lb_sexo);
         getContentPane().add(lb_password);
@@ -62,9 +67,12 @@ public class TelaUsers extends JFrame {
         lb_password      .setBounds(20, 70, 100, 15);
         tf_password      .setBounds(20, 90, 150, 25);
 
+
         lb_sexo       .setBounds(20, 120,300, 15);
         cb_sexo       .setBounds(20, 140,250, 25);
 
+        lb_observacoes        .setBounds(20,230,150, 15);
+        ta_Observacoes        .setBounds(20,250,200, 50);
 
         bt_salvar       .setBounds(20,340,80, 30);
         bt_limpar       .setBounds(105,340,80, 30);
