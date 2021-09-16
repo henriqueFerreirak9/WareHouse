@@ -1,5 +1,8 @@
 # wareHouse
 projeto da faculdade, Poo, almoxarife
+#tecnologias usadas
+java
+MYSQL
 
 #Imagens
 exemplo interface
