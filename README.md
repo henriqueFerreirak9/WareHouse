@@ -1,6 +1,7 @@
 # wareHouse
 projeto da faculdade, Poo, almoxarife
-#tecnologias usadas
+
+# Tecnologias usadas
 java
 MYSQL
 
