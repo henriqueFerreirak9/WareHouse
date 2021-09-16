@@ -10,7 +10,7 @@ import repository.Connect;
 public class Main {
     public  static void main (String[] agrs){
 
-        TelaUsers tela = new TelaUsers();
+        InterfaceScreenUser tela = new InterfaceScreenUser();
 
 
         User user1 = new User();
@@ -40,10 +40,9 @@ public class Main {
 
 
         System.out.println(user_teste);
-        if (user1.getAddress()!= null){
-            System.out.println(user_adress);
-        };
 
+        if (user1.getAddress()!= null)
+            System.out.println(user_adress);
 
         Connect.createConnection();
         System.out.println(Connect.connectionStatus());

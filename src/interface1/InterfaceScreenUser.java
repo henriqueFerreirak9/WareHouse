@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 
 
 
-public class TelaUsers extends JFrame {
+public class InterfaceScreenUser extends JFrame {
 
 
     JLabel lb_id, lb_name, lb_sexo, lb_password, lb_observacoes, lb_autent, lb_raca;
@@ -22,7 +22,7 @@ public class TelaUsers extends JFrame {
 
     String[] sexo = {"masculino", "feminino", "Outro"};
 
-    public TelaUsers(){
+    public InterfaceScreenUser(){
         setTitle("Cadastro de Usuarios");
         setSize(400, 550);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -85,13 +85,13 @@ public class TelaUsers extends JFrame {
         lb_password      .setBounds(20, 70, 100, 15);
         tf_password      .setBounds(20, 90, 150, 25);
 
-        lb_raca.setBounds(10,130,150,20);
-        rb_Branco.setBounds(10, 150, 100, 20);
-        rb_pardo.setBounds(110, 150, 100, 20);
-        rB_negro.setBounds(210, 150, 100, 20);
+        lb_raca.setBounds(20,130,150,20);
+        rb_Branco.setBounds(20, 150, 70, 20);
+        rb_pardo.setBounds(100, 150, 70, 20);
+        rB_negro.setBounds(190, 150, 70, 20);
 
-        lb_sexo       .setBounds(20, 220,300, 15);
-        cb_sexo       .setBounds(20, 240,250, 25);
+        lb_sexo       .setBounds(20, 200,300, 15);
+        cb_sexo       .setBounds(20, 220,250, 25);
 
         lb_observacoes        .setBounds(20,290,150, 15);
         ta_Observacoes        .setBounds(20,310,200, 50);
