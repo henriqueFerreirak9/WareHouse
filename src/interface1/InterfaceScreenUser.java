@@ -4,6 +4,7 @@ package interface1;
 import busines.User;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -95,6 +96,8 @@ public class InterfaceScreenUser extends JFrame {
 
         lb_observacoes        .setBounds(20,290,150, 15);
         ta_Observacoes        .setBounds(20,310,200, 50);
+        ta_Observacoes.setBackground(Color.cyan);
+        ta_Observacoes.setBorder(BorderFactory.createLineBorder(Color.blue.darker()));
 
         lb_autent       .setBounds(20,380,80, 30);
         ckb_ImNotRobo    .setBounds(110,380,280, 30);
