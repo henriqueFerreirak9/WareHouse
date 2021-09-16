@@ -1,10 +1,17 @@
-package busines;
+package interface1;
+
+
+import busines.Address;
+import busines.User;
+
+
 import repository.Connect;
-import busines.user.Address;
-import busines.user.User;
 
 public class Main {
     public  static void main (String[] agrs){
+
+        TelaUsers tela = new TelaUsers();
+
 
         User user1 = new User();
         user1.setId(1);

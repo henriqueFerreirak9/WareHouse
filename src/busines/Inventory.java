@@ -1,4 +1,4 @@
-package busines.product;
+package busines;
 
 public class Inventory {
     private int id_product;

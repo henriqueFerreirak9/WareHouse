@@ -1,4 +1,4 @@
-package busines.user;
+package busines;
 
 public class User {
     private int id;
