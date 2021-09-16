@@ -7,42 +7,56 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
+
 public class TelaUsers extends JFrame {
 
 
-    JLabel lb_id, lb_name, lb_sexo, lb_password, lb_observacoes;
+    JLabel lb_id, lb_name, lb_sexo, lb_password, lb_observacoes, lb_autent, lb_raca;
     JTextField tf_id, tf_name, tf_password;
-    JComboBox cb_sexo;
+
+    JCheckBox ckb_ImNotRobo;
+    JRadioButton rb_Branco, rB_negro, rb_pardo;
     JTextArea ta_Observacoes;
     JButton bt_salvar, bt_limpar, bt_fechar;
 
-    @SuppressWarnings("rawtypes")
+    String[] sexo = {"masculino", "feminino", "Outro"};
+
     public TelaUsers(){
-        setTitle("Cadastro de Veículos");
-        setSize(550, 450);
+        setTitle("Cadastro de Usuarios");
+        setSize(400, 550);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
-        lb_observacoes = new JLabel("observaçoes");
-        ta_Observacoes = new JTextArea("");
+
+
+        lb_autent = new JLabel("autêntifique-se");
+        lb_raca = new JLabel("raça/ cor");
         lb_id        = new JLabel("id");
-        lb_password        = new JLabel("password");
+        lb_password        = new JLabel("senha");
         lb_name     = new JLabel("nome");
         lb_sexo       = new JLabel("sexo");
+
+        ta_Observacoes = new JTextArea(5,20);
+        lb_observacoes = new JLabel("observaçoes");
+
         tf_id      = new JTextField("");
         tf_name   = new JTextField("");
         tf_password   = new JTextField("");
-        cb_sexo         = new JComboBox();
+
         bt_salvar       = new JButton("Salvar");
         bt_limpar       = new JButton("Limpar");
         bt_fechar       = new JButton("Fechar");
+        ckb_ImNotRobo = new JCheckBox("nao sou um robo   ");
+        rb_Branco = new JRadioButton("branco");
+        rb_pardo = new JRadioButton("negro");
+        rB_negro = new JRadioButton("pardo");
 
-        String[] sexo = new String[]{"Selecione seu sexo","masculino", "feminino"};
-
-        cb_sexo.setModel(new javax.swing.DefaultComboBoxModel(sexo));
-
+        JComboBox<String> cb_sexo = new JComboBox<>(sexo);
 
         getContentPane().setLayout(null);
 
+        getContentPane().add(lb_raca);
+        getContentPane().add(lb_autent);
         getContentPane().add(ta_Observacoes);
         getContentPane().add(lb_observacoes);
         getContentPane().add(lb_name);
@@ -56,6 +70,10 @@ public class TelaUsers extends JFrame {
         getContentPane().add(bt_salvar);
         getContentPane().add(bt_limpar);
         getContentPane().add(bt_fechar);
+        getContentPane().add(rb_Branco );
+        getContentPane().add(rb_pardo);
+        getContentPane().add(rB_negro);
+        getContentPane().add(ckb_ImNotRobo);
 
 
         lb_id        .setBounds(20, 20, 100, 15);
@@ -67,23 +85,30 @@ public class TelaUsers extends JFrame {
         lb_password      .setBounds(20, 70, 100, 15);
         tf_password      .setBounds(20, 90, 150, 25);
 
+        lb_raca.setBounds(10,130,150,20);
+        rb_Branco.setBounds(10, 150, 100, 20);
+        rb_pardo.setBounds(110, 150, 100, 20);
+        rB_negro.setBounds(210, 150, 100, 20);
 
-        lb_sexo       .setBounds(20, 120,300, 15);
-        cb_sexo       .setBounds(20, 140,250, 25);
+        lb_sexo       .setBounds(20, 220,300, 15);
+        cb_sexo       .setBounds(20, 240,250, 25);
 
-        lb_observacoes        .setBounds(20,230,150, 15);
-        ta_Observacoes        .setBounds(20,250,200, 50);
+        lb_observacoes        .setBounds(20,290,150, 15);
+        ta_Observacoes        .setBounds(20,310,200, 50);
 
-        bt_salvar       .setBounds(20,340,80, 30);
-        bt_limpar       .setBounds(105,340,80, 30);
-        bt_fechar       .setBounds(190,340,80, 30);
+        lb_autent       .setBounds(20,380,80, 30);
+        ckb_ImNotRobo    .setBounds(110,380,280, 30);
+
+        bt_salvar       .setBounds(20,440,80, 30);
+        bt_limpar       .setBounds(105,440,80, 30);
+        bt_fechar       .setBounds(190,440,80, 30);
 
 
         bt_salvar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                User veiculo = new User();
-                veiculo.setName(tf_name.getText());
+                User user = new User();
+                user.setName(tf_name.getText());
 
                 JOptionPane.showMessageDialog(null, tf_name.getText());
 
