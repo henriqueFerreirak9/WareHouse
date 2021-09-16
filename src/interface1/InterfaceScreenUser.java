@@ -21,7 +21,7 @@ public class InterfaceScreenUser extends JFrame {
     JTextArea ta_Observacoes;
     JButton bt_salvar, bt_limpar, bt_fechar;
 
-    String[] sexo = {"masculino", "feminino", "Outro"};
+    String[] sexo = {"masculino:", "feminino", "Outro"};
 
     public InterfaceScreenUser(){
         setTitle("Cadastro de Usuarios");
